@@ -338,7 +338,7 @@ _autoenv_source() {
   fi
 
   # Source the env file.
-  _autoenv_debug "== SOURCE: $autoenv_event: ${bold_color:-}$autoenv_env_file${reset_color:-} (in $PWD)"
+  _autoenv_debug "== SOURCE: $autoenv_event: ${bold_color:-}$autoenv_env_file${reset_color:-} (in $PWD)" 0
   (( ++_autoenv_debug_indent ))
 
   local restore_xtrace
