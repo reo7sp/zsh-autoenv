@@ -338,7 +338,7 @@ _autoenv_source() {
   fi
 
   # Source the env file.
-  _autoenv_debug "== SOURCE: $autoenv_event: ${bold_color:-}$autoenv_env_file${reset_color:-} (in $PWD)" 0
+  _autoenv_debug "SOURCE: $autoenv_event: ${bold_color:-}$autoenv_env_file${reset_color:-}" 0
   (( ++_autoenv_debug_indent ))
 
   local restore_xtrace
@@ -352,7 +352,7 @@ _autoenv_source() {
     setopt noxtrace
   fi
   (( --_autoenv_debug_indent ))
-  _autoenv_debug "== END SOURCE =="
+  _autoenv_debug "END SOURCE"
 
   if [[ $autoenv_event == enter ]]; then
     _autoenv_stack_entered_add $autoenv_env_file
